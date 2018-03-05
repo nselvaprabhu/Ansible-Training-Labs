@@ -32,5 +32,7 @@ ansible <hosts> -m service -a "name=httpd state=started"
 ```
 
 ####Pull a git repo using ansible ad-hoc commands
+```sh
 ansible localhost -m yum -a "name=git"
 ansible localhost -m git -a "repo=https://github.com/rgodishela/Allstate.git dest=/tmp/Allstate clone=yes"
+```
