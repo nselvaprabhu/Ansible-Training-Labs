@@ -30,3 +30,7 @@ ansible <hosts> -m copy -a 'content="Managed by Ansible\n' dest=/etc/motd' -u <o
 ansible <hosts> -m shell -a 'cat /etc/motd' -u <other_remote_user>
 ansible <hosts> -m service -a "name=httpd state=started"
 ```
+
+####Pull a git repo using ansible ad-hoc commands
+ansible localhost -m yum -a "name=git"
+ansible localhost -m git -a "repo=https://github.com/rgodishela/Allstate.git dest=/tmp/Allstate clone=yes"
